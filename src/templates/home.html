@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>
+  <br>
+  <br>
+    Magda es una artista mexicana que busca transmitir su pasión a traves de herramientas audiovisuales.
+  <br>
+  <br>
+  Póximamente en esta web habrá productos originales de ella como:
+  <br>
+</p>
+<!--Galeria de productos-->
+<p>
+Así como crear una comunidad de mentes inquietas en busca de formas de expresión innovadoras.
+<br>
+<h2>Galeria</h2>
+<div class="container">
+<div class="mySlides">
+  <div class="numbertext">1 / 7</div>
+  <img src="{{url_for('static', filename = 'img/PHOTO 1 Delicate-01.jpeg') }}">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">2 / 7</div>
+  <img src="{{url_for('static', filename = 'img/PHOTO 2 Moon-01.jpeg') }}">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">3 / 7</div>
+  <img src="{{url_for('static', filename = 'img/PHOTO 3 Oreo-02.jpeg') }}">
+</div>
+  
+<div class="mySlides">
+  <div class="numbertext">4 / 7</div>
+  <img src="{{url_for('static', filename = 'img/PHOTO 4 Levitation-01.jpeg') }}">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">5 / 7</div>
+  <img src="{{url_for('static', filename = 'img/PHOTO 5 Wolves-01.jpeg') }}">
+</div>
+  
+<div class="mySlides">
+  <div class="numbertext">6 / 7</div>
+  <img src="{{url_for('static', filename = 'img/PHOTO 6 PURPLE.jpeg') }}">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">7 / 7</div>
+  <img src="{{url_for('static', filename = 'img/PHOTO 7 Triangle-01.jpeg') }}">
+</div>
+
+<!-- CREAR FORMULARIO Y CREAR PUNTOS PARA CAMBIAR DE FOTO-->
+
+<a class="prev" onclick="plusSlides(-1)">❮-</a>
+<a class="next" onclick="plusSlides(1)">-❯</a>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("demo");
+var captionText = document.getElementById("caption");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<br>
+  <a href="https://forms.gle/bZPvgtrKCmnAX7pB8">*<strong>REGISTRO</strong>*</a>
+  <br>
+  Para estar informados de los proximos articulos
+</p>
+
+{% endblock%}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="keywords"
+      content="venta de playeras con ediciones fotograficas, cursos y talleres de fotografia, video y post produccion,venta de diseños fotograficos, ediciones fotograficas, fotografia digital, fotografia con celular, fotografia recreativa, fotografia de paisajes, fotografia de comida, video de comida, video de paisajes, video recreativos, video con celular, video con camara dslr, video con camara profesional, cursos de fotografia, cursos de video, cursos de edicios de fotografia, cursos de edicio de fotografia, cursos de edicios de edicios de fotografia usando celular, cursos de edicio de video usando celular, talleres de fotografia, talleres de video, talleres de edicios de video, talleres de edicios de fotografia, compra de playeras, playeras con edicios fotografiaca, vestidos con estampado de fotografias, vestidos minimalistas, playeras minimalistas"
+    />
+    <meta name="name" content="etwom" />
+    <title>Magda</title>
+    <!-- Custom CSS-->
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename = 'css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Boostrap4-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <nav id = "nav" class="navbar navbar-expand-sm bg-black navbar-dark fixed-top">
+      <a class="navbar-brand" href="/"
+        ><img
+          id="perfil"
+          src="{{url_for('static', filename = 'img/perfil.jpg')}}"
+          alt="foto de perfil"
+      /></a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a id = "barra" class="nav-link" href="{{url_for('blog')}}">| Mi blog |</a>
+        </li>
+        <li class="nav-item">
+          <a id = "barra" class="nav-link" href="{{url_for('viajes')}}">| Mis viajes |</a>
+        </li>
+        <br>
+        <li class="nav-item">
+          <a id = "barra" class="nav-link" href="{{url_for('mascaras')}}"
+            >| Tienda de máscaras y filtros |</a
+          >
+        </li>
+        <br>
+        <li class="nav-item">
+          <a id = "barra" class="nav-link" href="{{url_for('cursos')}}">| Cursos y talleres |</a>
+        </li>
+        <br>
+        <li class="nav-item">
+          <a id = "barra" class="nav-link" href="{{url_for('foro')}}"> | Foro |</a>
+        </li>
+        <br>
+        <li class="nav-item">
+          <a id = "barra" class="nav-link" href="{{url_for('ropa')}}">| Tienda de ropa |</a>
+        </li>
+        <br>
+        <li class="nav-item">
+          <a id = "barra" class="nav-link" href="{{url_for('preguntas')}}"
+            >| Preguntas frecuentes |</a>
+        </li>
+      </ul>
+    </nav>
+    <p>
+      <br>
+      <img
+        id="logo"
+        src="{{url_for('static', filename = 'img/Lumii_20200728_192603579.jpg') }}"
+        alt="logo de magda"
+      />
+      <br />
+      "El amor cuando lo compartes es arte"
+      <br />
+    </p>
+
+      {% block content %} {% endblock %}
+
+      <!-- SEPARAR LOGOS DE REDES -->
+    <div class="container">
+      <footer>
+        <br />
+        <a href="https://www.tiktok.com/@magdamontelong"
+          ><img
+            id="redes"
+            src="{{url_for('static', filename = 'img/tiktok sin fondo.png') }}"
+            alt="imagen de tik tok"
+        /></a>
+
+        <a href="https://www.instagram.com/magdamontelong/"
+          ><img
+            id="redes"
+            src="{{url_for('static', filename = 'img/Instagram sin fondo.png') }}"
+            alt="imagen de instagram"
+        /></a>
+
+        <a
+          href="https://www.youtube.com/channel/UC43lOJQhyBydcCjBoM3VZVQ?fbclid=IwAR3IDUAuQeGRfNPloKnRRkJjq_SKCPq2CHosy71z1qTopBGx3ShgDb_v1EU"
+          ><img
+            id="redes"
+            src="{{url_for('static', filename ='img/YouTube sin fondo.png') }}"
+            alt="imagen de youtube"
+        /></a>
+
+        <a href="https://www.facebook.com/magdamontelong/"
+          ><img
+            id="redes"
+            src="{{ url_for('static', filename = 'img/Facebook sin fondo.png')}}"
+            alt="imagen de facebook"
+        /></a>
+        <br>
+        <br>
+        <p id="foter">
+          Todo el contenido en este sitio web es de propiedad de Magda Montelonga
+        fotografa 2020
+          <br />
+          All site content is property of Magda Montelong Photography and
+        Videography 2020
+          <br />
+          Declaracion de privacidad
+          <br>
+          Derechos reservados 2020 by e-twom
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
